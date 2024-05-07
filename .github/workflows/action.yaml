@@ -15,5 +15,6 @@ jobs:
         run: argocd login nemkovich.by --grpc-web-root-path /argocd --username admin --password ${{ secrets.AC_PASS }}
       - name: argocd app list
         run: argocd app list
-          
+      - name: argocd app sync
+        run: argocd app sync portfolio
           
