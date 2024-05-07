@@ -12,7 +12,7 @@ jobs:
         #   # Version of the ArgoCD CLI to use
         #   version: # optional, default is latest
       - name: argocd login
-        run: argocd login nemkovich.by --grpc-web-root-path /argocd --username admin --password $AC_PASS
+        run: argocd login nemkovich.by --grpc-web-root-path /argocd --username admin --password ${{ secrets.AC_PASS }}
       - name: argocd app list
         run: argocd app list
           
