@@ -5,4 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Hello World!"
+        run: echo "Hello World!" 
+      - name: ArgoCD CLI
+        uses: imajeetyadav/argocd-cli@v1
+        # with:
+        #   # Version of the ArgoCD CLI to use
+        #   version: # optional, default is latest
+      - name: argocd login
+        run: argocd login nemkovich.by --grpc-web-root-path /argocd --username admin --password $AC_PASS
+      - name: argocd app list
+        run: argocd app list
+          
+          
