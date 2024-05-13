@@ -19,4 +19,5 @@ jobs:
         run: argocd app list
       - name: argocd app sync
         run: argocd app sync portfolio
-      - name: argocd app wait portfolio --sync --health --timeout 120
+      - name: argocd app wait
+        run: argocd app wait portfolio --sync --health --timeout 120
